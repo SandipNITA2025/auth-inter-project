@@ -15,7 +15,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/login", {
+      const response = await axios.post("https://auth-inter-project-xafx.vercel.app/api/login", {
         email,
         password,
       });

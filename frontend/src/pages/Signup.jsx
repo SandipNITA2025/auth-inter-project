@@ -19,7 +19,7 @@ const Signup = () => {
     try {
       setLoading(true); 
 
-      const response = await axios.post("http://localhost:5000/api/signup", {
+      const response = await axios.post("https://auth-inter-project-xafx.vercel.app/api/signup", {
         username,
         email,
         password,
@@ -29,7 +29,7 @@ const Signup = () => {
       setEmail("");
       setPassword("");
 
-      console.log(response.data);
+      // console.log(response.data);
       navigate("/login")
     } catch (error) {
       console.error("Error during signup:", error.response.data);
